@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[CardiologicalPCISegment] (
+    [CardiologicalPCISegmentId] INT        IDENTITY (1, 1) NOT NULL,
+    [CardiologicalPCIId]        INT        NULL,
+    [StentId]                   INT        NULL,
+    [SegmentId]                 INT        NULL,
+    [LesionTypeId]              INT        NULL,
+    [Restenosis]                BIT        NULL,
+    [Bifurcation]               BIT        NULL,
+    [TIMIBId]                   INT        NULL,
+    [TIMIAId]                   INT        NULL,
+    [StenosisPercentage]        INT        NULL,
+    [StentTypeId]               INT        NULL,
+    [DirectStent]               BIT        NULL,
+    [DrugElutionTypeId]         INT        NULL,
+    [StentBallonSize]           FLOAT (53) NULL,
+    [Stentlength]               FLOAT (53) NULL,
+    CONSTRAINT [PK_CardiologicalPCISegment] PRIMARY KEY CLUSTERED ([CardiologicalPCISegmentId] ASC),
+    CONSTRAINT [FK_CardiologicalPCISegment_CardiologicalPCI] FOREIGN KEY ([CardiologicalPCIId]) REFERENCES [dbo].[CardiologicalPCI] ([CardiologicalPCIId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_CardiologicalPCISegment_DrugElutionType] FOREIGN KEY ([DrugElutionTypeId]) REFERENCES [dbo].[DrugElutionType] ([DrugElutionTypeId]),
+    CONSTRAINT [FK_CardiologicalPCISegment_LesionType] FOREIGN KEY ([LesionTypeId]) REFERENCES [dbo].[LesionType] ([LesionTypeId]),
+    CONSTRAINT [FK_CardiologicalPCISegment_Segment] FOREIGN KEY ([SegmentId]) REFERENCES [dbo].[Segment] ([SegmentId]),
+    CONSTRAINT [FK_CardiologicalPCISegment_Stent] FOREIGN KEY ([StentId]) REFERENCES [dbo].[Stent] ([StentId]),
+    CONSTRAINT [FK_CardiologicalPCISegment_StentType] FOREIGN KEY ([StentTypeId]) REFERENCES [dbo].[StentType] ([StentTypeId]),
+    CONSTRAINT [FK_CardiologicalPCISegment_TIMI] FOREIGN KEY ([TIMIAId]) REFERENCES [dbo].[TIMI] ([TIMIId]),
+    CONSTRAINT [FK_CardiologicalPCISegment_TIMI1] FOREIGN KEY ([TIMIBId]) REFERENCES [dbo].[TIMI] ([TIMIId])
+);
+

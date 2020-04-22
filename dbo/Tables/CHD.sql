@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[CHD] (
+    [CHDId]   INT           IDENTITY (1, 1) NOT NULL,
+    [CHDName] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([CHDId] ASC)
+);
+

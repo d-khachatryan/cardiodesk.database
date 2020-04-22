@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[TIMI] (
+    [TIMIId]   INT           IDENTITY (1, 1) NOT NULL,
+    [TIMIName] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([TIMIId] ASC)
+);
+

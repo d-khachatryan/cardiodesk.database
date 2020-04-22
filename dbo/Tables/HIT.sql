@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[HIT] (
+    [HITId]   INT           IDENTITY (1, 1) NOT NULL,
+    [HITName] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([HITId] ASC)
+);
+

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[COPD] (
+    [COPDId]   INT           IDENTITY (1, 1) NOT NULL,
+    [COPDName] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([COPDId] ASC)
+);
+

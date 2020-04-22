@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[CATD] (
+    [CATDId]   INT           IDENTITY (1, 1) NOT NULL,
+    [CATDName] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([CATDId] ASC)
+);
+

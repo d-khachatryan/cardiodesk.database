@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CardioDesk.Database", "CardioDesk.Database.sqlproj", "{B9703A2C-94EF-42D5-9997-87A45ECFDFCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9703A2C-94EF-42D5-9997-87A45ECFDFCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9703A2C-94EF-42D5-9997-87A45ECFDFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9703A2C-94EF-42D5-9997-87A45ECFDFCA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B9703A2C-94EF-42D5-9997-87A45ECFDFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9703A2C-94EF-42D5-9997-87A45ECFDFCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9703A2C-94EF-42D5-9997-87A45ECFDFCA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {837E32EC-58D4-451F-81FA-1FC47FBFF79D}
+	EndGlobalSection
+EndGlobal

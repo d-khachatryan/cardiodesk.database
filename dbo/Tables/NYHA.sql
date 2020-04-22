@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[NYHA] (
+    [NYHAId]   INT           IDENTITY (1, 1) NOT NULL,
+    [NYHAName] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([NYHAId] ASC)
+);
+

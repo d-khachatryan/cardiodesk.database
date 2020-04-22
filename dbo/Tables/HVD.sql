@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[HVD] (
+    [HVDId]   INT           IDENTITY (1, 1) NOT NULL,
+    [HVDName] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([HVDId] ASC)
+);
+

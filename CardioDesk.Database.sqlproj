@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>CardioDesk.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{b9703a2c-94ef-42d5-9997-87a45ecfdfca}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>CardioSence.Database</RootNamespace>
+    <AssemblyName>CardioSence.Database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\MortalityType.sql" />
+    <Build Include="dbo\Tables\Implant.sql" />
+    <Build Include="dbo\Tables\Valve.sql" />
+    <Build Include="dbo\Tables\CardiologicalCatheterization.sql" />
+    <Build Include="dbo\Tables\Drug.sql" />
+    <Build Include="dbo\Tables\Stent.sql" />
+    <Build Include="dbo\Tables\NYHA.sql" />
+    <Build Include="dbo\Tables\ValveType.sql" />
+    <Build Include="dbo\Tables\AspNetUsers.sql" />
+    <Build Include="dbo\Tables\DrugFrequency.sql" />
+    <Build Include="dbo\Tables\AspNetUserClaims.sql" />
+    <Build Include="dbo\Tables\OtherDisease.sql" />
+    <Build Include="dbo\Tables\CardiologicalSurgeryValve.sql" />
+    <Build Include="dbo\Tables\AspNetUserLogins.sql" />
+    <Build Include="dbo\Tables\CardiologicalExamination.sql" />
+    <Build Include="dbo\Tables\CardiologicalCaseDrug.sql" />
+    <Build Include="dbo\Tables\LesionType.sql" />
+    <Build Include="dbo\Tables\PVDT.sql" />
+    <Build Include="dbo\Tables\AspNetUserRoles.sql" />
+    <Build Include="dbo\Tables\CardiologicalObjective.sql" />
+    <Build Include="dbo\Tables\CardiologicalCPB.sql" />
+    <Build Include="dbo\Tables\TIMI.sql" />
+    <Build Include="dbo\Tables\PulmonaryDisease.sql" />
+    <Build Include="dbo\Tables\__MigrationHistory.sql" />
+    <Build Include="dbo\Tables\Liver.sql" />
+    <Build Include="dbo\Tables\BebType.sql" />
+    <Build Include="dbo\Tables\Gender.sql" />
+    <Build Include="dbo\Tables\StentType.sql" />
+    <Build Include="dbo\Tables\SmokingStatus.sql" />
+    <Build Include="dbo\Tables\Lung.sql" />
+    <Build Include="dbo\Tables\SampleType.sql" />
+    <Build Include="dbo\Tables\Country.sql" />
+    <Build Include="dbo\Tables\DrugElutionType.sql" />
+    <Build Include="dbo\Tables\SmokingType.sql" />
+    <Build Include="dbo\Tables\HeartSoundType.sql" />
+    <Build Include="dbo\Tables\Region.sql" />
+    <Build Include="dbo\Tables\DiseaseStatus.sql" />
+    <Build Include="dbo\Tables\HeartMurmurType.sql" />
+    <Build Include="dbo\Tables\CardiologicalPCISegment.sql" />
+    <Build Include="dbo\Tables\Community.sql" />
+    <Build Include="dbo\Tables\TreatmentType.sql" />
+    <Build Include="dbo\Tables\CaroticBruit.sql" />
+    <Build Include="dbo\Tables\Profession.sql" />
+    <Build Include="dbo\Tables\AbdominalStatus.sql" />
+    <Build Include="dbo\Tables\RelativeStatus.sql" />
+    <Build Include="dbo\Tables\ShockType.sql" />
+    <Build Include="dbo\Tables\DuplexStenosis.sql" />
+    <Build Include="dbo\Tables\ArteriaStatus.sql" />
+    <Build Include="dbo\Tables\ReferralPhysician.sql" />
+    <Build Include="dbo\Tables\BloodGroup.sql" />
+    <Build Include="dbo\Tables\CATD.sql" />
+    <Build Include="dbo\Tables\CardiologicalDuplexScan.sql" />
+    <Build Include="dbo\Tables\PeripherialStatus.sql" />
+    <Build Include="dbo\Tables\ReferralOrganization.sql" />
+    <Build Include="dbo\Tables\RhFactor.sql" />
+    <Build Include="dbo\Tables\Physician.sql" />
+    <Build Include="dbo\Tables\HIVStatus.sql" />
+    <Build Include="dbo\Tables\RheumatizmDuration.sql" />
+    <Build Include="dbo\Tables\CardiologicalObjectiveDrug.sql" />
+    <Build Include="dbo\Tables\HBSStatus.sql" />
+    <Build Include="dbo\Tables\InfectiousEndocarditis.sql" />
+    <Build Include="dbo\Tables\Bypass.sql" />
+    <Build Include="dbo\Tables\HypertensionDuration.sql" />
+    <Build Include="dbo\Tables\HCVStatus.sql" />
+    <Build Include="dbo\Tables\BicarbonateType.sql" />
+    <Build Include="dbo\Tables\UrogenitalicDisease.sql" />
+    <Build Include="dbo\Tables\TPHAStatus.sql" />
+    <Build Include="dbo\Tables\CardiologicalCatheterizationSegment.sql" />
+    <Build Include="dbo\Tables\Liquid.sql" />
+    <Build Include="dbo\Tables\BRUStatus.sql" />
+    <Build Include="dbo\Tables\Resident.sql" />
+    <Build Include="dbo\Tables\MovementStatus.sql" />
+    <Build Include="dbo\Tables\CardioplegiaType.sql" />
+    <Build Include="dbo\Tables\TroponinStatus.sql" />
+    <Build Include="dbo\Tables\CardiologicalECG.sql" />
+    <Build Include="dbo\Tables\AlcoholUsage.sql" />
+    <Build Include="dbo\Tables\BBB.sql" />
+    <Build Include="dbo\Tables\ImmunologicalStatus.sql" />
+    <Build Include="dbo\Tables\BloodProduct.sql" />
+    <Build Include="dbo\Tables\UrineCylinderStatus.sql" />
+    <Build Include="dbo\Tables\ConductionDisturbance.sql" />
+    <Build Include="dbo\Tables\CardiologicalSurgery.sql" />
+    <Build Include="dbo\Tables\Cadiomyopathy.sql" />
+    <Build Include="dbo\Tables\InotropicSupport.sql" />
+    <Build Include="dbo\Tables\UrineMicroorganismStatus.sql" />
+    <Build Include="dbo\Tables\DeathOrganization.sql" />
+    <Build Include="dbo\Tables\Laun.sql" />
+    <Build Include="dbo\Tables\DeathCause.sql" />
+    <Build Include="dbo\Tables\CCS.sql" />
+    <Build Include="dbo\Tables\ECGZone.sql" />
+    <Build Include="dbo\Tables\StrokeType.sql" />
+    <Build Include="dbo\Tables\RhythmType.sql" />
+    <Build Include="dbo\Tables\CardiologicalCase.sql" />
+    <Build Include="dbo\Tables\CHD.sql" />
+    <Build Include="dbo\Tables\DominanceType.sql" />
+    <Build Include="dbo\Tables\VH.sql" />
+    <Build Include="dbo\Tables\ClimaxStatus.sql" />
+    <Build Include="dbo\Tables\COPD.sql" />
+    <Build Include="dbo\Tables\DentalDisease.sql" />
+    <Build Include="dbo\Tables\Complian.sql" />
+    <Build Include="dbo\Tables\Segment.sql" />
+    <Build Include="dbo\Tables\CardiologicalSurgeryDrug.sql" />
+    <Build Include="dbo\Tables\CardiologicalEchoCGVelocity.sql" />
+    <Build Include="dbo\Tables\CardiologicalEchoCG.sql" />
+    <Build Include="dbo\Tables\CardiologicalCaseComplian.sql" />
+    <Build Include="dbo\Tables\MedicalProcedure.sql" />
+    <Build Include="dbo\Tables\Organization.sql" />
+    <Build Include="dbo\Tables\Contractility.sql" />
+    <Build Include="dbo\Tables\GastrointestinalDisease.sql" />
+    <Build Include="dbo\Tables\CardiologicalSurgeryProcedure.sql" />
+    <Build Include="dbo\Tables\CardiologicalCaseDisease.sql" />
+    <Build Include="dbo\Tables\EchoCGZone.sql" />
+    <Build Include="dbo\Tables\HBCriteria.sql" />
+    <Build Include="dbo\Tables\Complication.sql" />
+    <Build Include="dbo\Tables\TreadmilResult.sql" />
+    <Build Include="dbo\Tables\Disease.sql" />
+    <Build Include="dbo\Tables\CardiologicalEchoCGWall.sql" />
+    <Build Include="dbo\Tables\HVD.sql" />
+    <Build Include="dbo\Tables\CardiologicalSurgeryComplication.sql" />
+    <Build Include="dbo\Tables\TreadmilProtocol.sql" />
+    <Build Include="dbo\Tables\BloodCholesterol.sql" />
+    <Build Include="dbo\Tables\ValveSurgeryType.sql" />
+    <Build Include="dbo\Tables\Insufficiency.sql" />
+    <Build Include="dbo\Tables\Invasion.sql" />
+    <Build Include="dbo\Tables\CardiologicalTreadmil.sql" />
+    <Build Include="dbo\Tables\HIT.sql" />
+    <Build Include="dbo\Tables\Prothesis.sql" />
+    <Build Include="dbo\Tables\Stenosis.sql" />
+    <Build Include="dbo\Tables\ImplantSize.sql" />
+    <Build Include="dbo\Tables\CardiologicalCaseInvasion.sql" />
+    <Build Include="dbo\Tables\AspNetRoles.sql" />
+    <Build Include="dbo\Tables\CardiologicalPCI.sql" />
+    <Build Include="dbo\Views\vwCardiologicalEchoCG.sql" />
+    <Build Include="dbo\Views\vwCardiologicalEchoCGVelocity.sql" />
+    <Build Include="dbo\Views\vwCardiologicalEchoCGWall.sql" />
+    <Build Include="dbo\Views\vwCardiologicalExamination.sql" />
+    <Build Include="dbo\Views\vwCardiologicalObjective.sql" />
+    <Build Include="dbo\Views\vwCardiologicalObjectiveDrug.sql" />
+    <Build Include="dbo\Views\vwCardiologicalPCI.sql" />
+    <Build Include="dbo\Views\vwCardiologicalPCISegment.sql" />
+    <Build Include="dbo\Views\vwResidentInfo.sql" />
+    <Build Include="dbo\Views\vwCardiologicalSurgery.sql" />
+    <Build Include="dbo\Views\vwCardiologicalSurgeryComplication.sql" />
+    <Build Include="dbo\Views\vwCardiologicalSurgeryDrug.sql" />
+    <Build Include="dbo\Views\vwCardiologicalSurgeryProcedure.sql" />
+    <Build Include="dbo\Views\vwCardiologicalSurgeryValve.sql" />
+    <Build Include="dbo\Views\vwCardiologicalTreadmil.sql" />
+    <Build Include="dbo\Views\vwResident.sql" />
+    <Build Include="dbo\Views\vwCardiologicalCPB.sql" />
+    <Build Include="dbo\Views\vwAspNetUserRoles.sql" />
+    <Build Include="dbo\Views\vwCardiologicalCase.sql" />
+    <Build Include="dbo\Views\vwCardiologicalCaseComplian.sql" />
+    <Build Include="dbo\Views\vwCardiologicalCaseDisease.sql" />
+    <Build Include="dbo\Views\vwCardiologicalCaseDrug.sql" />
+    <Build Include="dbo\Views\vwCardiologicalCaseInvasion.sql" />
+    <Build Include="dbo\Views\vwCardiologicalCatheterization.sql" />
+    <Build Include="dbo\Views\vwCardiologicalCatheterizationSegment.sql" />
+    <Build Include="dbo\Views\vwCardiologicalDuplexScan.sql" />
+    <Build Include="dbo\Views\vwCardiologicalECG.sql" />
+    <Build Include="dbo\Stored Procedures\_ClearDatabase.sql" />
+  </ItemGroup>
+</Project>

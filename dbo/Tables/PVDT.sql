@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[PVDT] (
+    [PVDTId]   INT           IDENTITY (1, 1) NOT NULL,
+    [PVDTName] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([PVDTId] ASC)
+);
+
